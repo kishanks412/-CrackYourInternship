@@ -1,3 +1,31 @@
+//  Brute Force ->using recursive approach
+
+class Solution {
+public:
+    int numDistinct(string s, string t) {
+        int n=s.length();
+        int m=t.length();
+        return str(s,t,n-1,m-1,dp);
+    }
+    int str(string s,string t,int n,int m)
+    {
+        
+        if(m<0)   return 1;
+        if(n<0)   return 0;
+
+        if(s[n]==t[m])
+             return str(s,t,n-1,m-1,dp)+str(s,t,n-1,m);
+        return str(s,t,n-1,m);
+    }
+};
+
+
+
+//  Brute Force ->using recursive + Memoization approach
+
+
+
+
 class Solution {
 public:
     int numDistinct(string s, string t) {
