@@ -24,6 +24,7 @@ public:
 
 
 
+
 //   adding by taking every condition separately
 
 class Solution {
