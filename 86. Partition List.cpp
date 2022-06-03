@@ -19,7 +19,7 @@ public:
                 t4=t4->next;
             }
         }
-        t4->next=NULL;
+        t4->next=NULL;                      // if we dont initialise it as NULL then there will be a loop cycle
         t3->next=t2.next;
         return t1.next;
     }
